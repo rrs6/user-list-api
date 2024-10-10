@@ -1,0 +1,32 @@
+{
+  "name": "user-list-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --transpile-only ./src/app.ts",
+    "migration:create": "ts-node-dev ./node_modules/.bin/typeorm migration:create ./db/migrations/migration",
+    "migrations:run": "ts-node-dev ./node_modules/.bin/typeorm migration:run -d ./db/connection.ts",
+    "migrations:revert": "ts-node-dev ./node_modules/.bin/typeorm migration:revert -d ./db/connection.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}
