@@ -19,4 +19,9 @@ export class ClassRepository {
         const class0 = await this.classRepo.findOneBy({id});
         return class0;
     }
+
+    async getAllClass() {
+        const classes = await this.classRepo.find();
+        return classes;
+    }
 }

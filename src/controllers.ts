@@ -74,4 +74,9 @@ export class Controllers {
         await this.classRepository.createClass(name);
         return res.status(201).json({msg: "class created"});
     }
+
+    async getAllClass(req: Request, res: Response, next: NextFunction) {
+        const classes = await this.classRepository.getAllClass();
+        return res.status(200).json(classes);
+    }
 }
